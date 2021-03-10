@@ -1,2 +1,2 @@
-# week1 + week 2+ week 3
- To test: react.html AND vue.html 
+# Dinner planner app
+ in react and vue vue using fireBase
