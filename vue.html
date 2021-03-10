@@ -1,0 +1,97 @@
+<html>
+<head>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+	<script>
+  // Babel generates calls to React.createElement by default, so we redefine that:
+  	const React={createElement:Vue.h};
+	</script>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+<div id="app"></div>
+</body>
+
+<script src="js/apiConfig.js"></script>
+<script src="js/dishSource.js"></script>
+<script src="js/dinnerModel.js"></script>
+<script src="vuejs/sidebarPresenter.js" type="text/jsx"></script>
+<script src="vuejs/summaryPresenter.js" type="text/jsx"></script>
+<script src="vuejs/searchPresenter.js" type="text/jsx"> </script>
+<script src="js/views/sidebarView.js" type="text/jsx"></script>
+<script src="js/views/summaryView.js" type="text/jsx"></script>
+<script src="js/views/searchView.js" type="text/jsx"></script>
+<script src="js/views/detailsView.js" type="text/jsx"></script>
+<script src="js/views/promiseNoData.js" type="text/jsx"> </script>
+<script src="vuejs/detailsPresenter.js" type="text/jsx"></script>
+<script src="vuejs/showPresenter.js" type="text/jsx"></script>
+<script src="js/app.js" type="text/jsx"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+<script src="js/firebaseConfig.js"></script>
+<script src="js/firebaseModel.js"></script>
+
+
+
+<script type="text/jsx">
+
+const persons=4;
+const guests=3;
+const options=["starter", "main course", "dessert"];
+
+//const VueSidebarLocalState ={
+//	data() {return {number: guests}; },
+//	render() {
+//		return <SidebarView guests={this.number}
+//				      setGuests={x=>this.number=x} 
+//			/>;
+//	}
+//};
+
+
+const myModel= new DinnerModel();
+
+const TopLevelModel={
+	data(){ return {model: myModel}; }, 
+	created(){persistModel(this.model);},
+	render() {
+		return <App model={this.model} />; }
+}; 
+
+
+ 
+
+  // Vue.render(<SidebarView guests={guests} />, document.getElementById("app"));
+  // Vue.render(
+  // <SearchFormView options={options}
+		// onSearch={ ()=>console.log("User wants to search!")}
+		// onText={txt=>console.log("User typed: ", txt)}
+		// onDishType={dishType=>console.log("User chose dish type: ", dishType)}
+   // <SidebarView guests={6}
+	// setGuests={n=>console.log("The user wants a dinner for ", n, " guests")} />
+	// <VueSidebarLocalState />, 
+  // <App model={myModel}/>
+  // , document.getElementById("app"));
+
+
+
+/* TEST HW1
+Vue.render(
+	<TopLevelModel />
+	, document.getElementById("app")); */
+
+// TEST	2.3 (45)
+
+// Promise.all(
+//	 [DishSource.getDishDetails(523145), DishSource.getDishDetails(787321),
+//	 DishSource.getDishDetails(452179)]
+ //).then(function(values){ 
+ //      values.map(d=>myModel.addToMenu(d)); 
+ 
+ firebase.database().ref("dinnerModel").once("value").then( ()=>Vue.render(<TopLevelModel /> , document.getElementById("app")));	   
+//});  
+
+</script>
+</html>

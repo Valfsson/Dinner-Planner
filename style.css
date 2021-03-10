@@ -1,0 +1,234 @@
+.searchResult {
+    text-align : center;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+  }
+  
+.pricePerServing {
+    text-align: right;
+}
+
+.pic{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 25px;
+    padding: 25px;
+    border: 3px solid rgb(2, 41, 5); 
+    border-radius: 5px;
+    width: 450px;
+    
+}
+
+.smallPic{
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.title {
+    color:rgb(2, 41, 5);  
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 30px;
+
+
+}
+
+.buttonsDiv {
+    text-align: right;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 25px;
+    font-size: 15px;
+
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 20px;
+    border-radius: 12px;
+}
+
+
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.buttonSmall{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 13px; 
+}
+
+.buttonSmallRight{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    text-align: center;
+    padding: 8px 13px;
+    float:right; 
+}
+.navigation{
+    padding: 10px;
+    margin-bottom: 15px;
+
+}
+
+.price{
+    width: 350px;
+    padding: 50px;
+    border: 3px solid rgb(2, 41, 5);  
+    line-height: 0.8;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    margin-left: 25px;
+
+}
+
+.ingridients{
+    width: 350px;
+    padding: 50px;
+    border: 3px solid rgb(2, 41, 5);  
+    line-height: 0.3;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    margin-left: 25px;
+
+}
+
+.instr{
+    width: 600px;
+    padding: 20px;
+    border: 3px solid rgb(2, 41, 5);  
+    line-height: 1.0;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 25px;
+  
+
+}
+
+.link{
+    border: 3px solid rgb(2, 41, 5);  
+    line-height: 1.0;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 26px;
+    color: #4CAF50;
+
+}
+
+.tableHead{
+    color:rgb(2, 41, 5);  
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 25px;
+    background-color: #4caf4fec;
+}
+
+.table{
+    border: 3px solid rgb(2, 41, 5);  
+    line-height: 0.8;
+    text-align: middle;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    margin-left: 25px; 
+    font-family: Georgia;
+}
+
+.tableRaw{
+    background-color: #4caf4f82;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+}
+
+
+@media (min-width: 450px) { 
+    .flexParent{
+        display:flex;  
+        flex-direction:row;
+        height:100%; 
+        border-style: solid; 
+        margin:0;
+    }
+}
+
+
+.sidebar{
+    margin: 2px; 
+    background-color:rgba(238, 240, 198, 0.831);
+    border: 3px solid rgba(2, 41, 5, 0.66); 
+    margin-top: 10px;
+    margin-left: 10px; 
+    padding: 20px 20px;
+    width:35%; 
+    overflow: auto;
+
+}
+
+.mainContent{
+    flex:1; 
+    margin: 2px; 
+    background-color:rgba(238, 240, 198, 0.372);
+    border: 3px solid rgba(2, 41, 5, 0.66); 
+    margin-top: 10px;
+    margin-right: 10px; 
+    overflow: auto;
+
+}
+
+.searchArea{
+    background-color:rgba(238, 240, 198, 0.372);
+    border: 3px solid rgba(2, 41, 5, 0.66); 
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px; 
+    font-size: 20px;
+}
+
+.hidden{
+    display:none;
+}
